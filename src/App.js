@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './component/Header'
+import { ChakraProvider } from '@chakra-ui/react'
+import "./App.css"
+import Hero from './component/Hero'
+import '../node_modules/react-modal-video/css/modal-video.css';
+import About from './component/About'
+import Service from './component/Service'
+import Project from './component/Project'
+import Cta from './component/Cta'
+import Events from './component/Events'
+import Footer from './component/Footer'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ChakraProvider>
+      <Header />
+      <Hero />
+      <About />
+      <Service />
+      {/* <Project /> */}
+      <Cta />
+      <Events />
+      <Footer />
+    </ChakraProvider>
+  )
 }
-
-export default App;
